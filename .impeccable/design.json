@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T00:00:00Z",
+  "title": "Design System: Gia Bảo · 206",
+  "extensions": {
+    "colorMeta": {
+      "race-orange": {
+        "role": "primary",
+        "displayName": "Race Orange",
+        "canonical": "oklch(66.5% 0.215 37)",
+        "tonalRamp": [
+          "oklch(15% 0.102 37)",
+          "oklch(25% 0.127 37)",
+          "oklch(36% 0.155 37)",
+          "oklch(48% 0.185 37)",
+          "oklch(60% 0.215 37)",
+          "oklch(72% 0.185 37)",
+          "oklch(84% 0.155 37)",
+          "oklch(95% 0.127 37)"
+        ]
+      },
+      "course-blue": {
+        "role": "secondary",
+        "displayName": "Course Blue",
+        "canonical": "oklch(57% 0.22 268)",
+        "tonalRamp": [
+          "oklch(15% 0.105 268)",
+          "oklch(25% 0.13 268)",
+          "oklch(36% 0.158 268)",
+          "oklch(48% 0.189 268)",
+          "oklch(60% 0.22 268)",
+          "oklch(72% 0.189 268)",
+          "oklch(84% 0.158 268)",
+          "oklch(95% 0.13 268)"
+        ]
+      },
+      "asphalt": {
+        "role": "neutral",
+        "displayName": "Asphalt",
+        "canonical": "oklch(21% 0.004 270)",
+        "tonalRamp": [
+          "oklch(15% 0.003 270)",
+          "oklch(25% 0.004 270)",
+          "oklch(36% 0.004 270)",
+          "oklch(48% 0.005 270)",
+          "oklch(60% 0.006 270)",
+          "oklch(72% 0.005 270)",
+          "oklch(84% 0.004 270)",
+          "oklch(95% 0.004 270)"
+        ]
+      },
+      "asphalt-raised": {
+        "role": "neutral",
+        "displayName": "Raised Asphalt",
+        "canonical": "oklch(25% 0.006 270)",
+        "tonalRamp": [
+          "oklch(15% 0.003 270)",
+          "oklch(25% 0.004 270)",
+          "oklch(36% 0.004 270)",
+          "oklch(48% 0.005 270)",
+          "oklch(60% 0.006 270)",
+          "oklch(72% 0.005 270)",
+          "oklch(84% 0.004 270)",
+          "oklch(95% 0.004 270)"
+        ]
+      },
+      "tyvek": {
+        "role": "neutral",
+        "displayName": "Tyvek",
+        "canonical": "oklch(96.5% 0.006 106)",
+        "tonalRamp": [
+          "oklch(15% 0.004 106)",
+          "oklch(25% 0.005 106)",
+          "oklch(36% 0.006 106)",
+          "oklch(48% 0.007 106)",
+          "oklch(60% 0.008 106)",
+          "oklch(72% 0.007 106)",
+          "oklch(84% 0.006 106)",
+          "oklch(95% 0.005 106)"
+        ]
+      },
+      "carbon-ink": {
+        "role": "neutral",
+        "displayName": "Carbon Ink",
+        "canonical": "oklch(17.8% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0.0 0)",
+          "oklch(25% 0.0 0)",
+          "oklch(36% 0.0 0)",
+          "oklch(48% 0.0 0)",
+          "oklch(60% 0.0 0)",
+          "oklch(72% 0.0 0)",
+          "oklch(84% 0.0 0)",
+          "oklch(95% 0.0 0)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(34% 0.003 106)",
+        "tonalRamp": [
+          "oklch(15% 0.002 106)",
+          "oklch(25% 0.002 106)",
+          "oklch(36% 0.003 106)",
+          "oklch(48% 0.003 106)",
+          "oklch(60% 0.004 106)",
+          "oklch(72% 0.003 106)",
+          "oklch(84% 0.003 106)",
+          "oklch(95% 0.002 106)"
+        ]
+      },
+      "road-paint": {
+        "role": "neutral",
+        "displayName": "Road Paint",
+        "canonical": "rgba(244, 244, 240, .92)",
+        "tonalRamp": [
+          "oklch(15% 0.003 106)",
+          "oklch(25% 0.004 106)",
+          "oklch(36% 0.004 106)",
+          "oklch(48% 0.005 106)",
+          "oklch(60% 0.006 106)",
+          "oklch(72% 0.005 106)",
+          "oklch(84% 0.004 106)",
+          "oklch(95% 0.004 106)"
+        ]
+      },
+      "road-paint-dim": {
+        "role": "neutral",
+        "displayName": "Road Paint Dim",
+        "canonical": "rgba(244, 244, 240, .74)",
+        "tonalRamp": [
+          "oklch(15% 0.003 106)",
+          "oklch(25% 0.004 106)",
+          "oklch(36% 0.004 106)",
+          "oklch(48% 0.005 106)",
+          "oklch(60% 0.006 106)",
+          "oklch(72% 0.005 106)",
+          "oklch(84% 0.004 106)",
+          "oklch(95% 0.004 106)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Bib Number",
+        "purpose": "The bib number only."
+      },
+      "headline": {
+        "displayName": "Leg Title",
+        "purpose": "Leg titles, name band and finish title."
+      },
+      "title": {
+        "displayName": "Split Title",
+        "purpose": "Entries inside a leg; big painted words."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "One-sentence summary under each leg title, max 34ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading copy, max 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Roles, legends, captions, footer."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pinned-bib",
+        "value": "0 2px 3px rgba(0,0,0,.35), 0 30px 60px -18px rgba(0,0,0,.7)",
+        "purpose": "The bib."
+      },
+      {
+        "name": "stamped-card",
+        "value": "0 2px 3px rgba(0,0,0,.3), 0 18px 34px -16px rgba(0,0,0,.7)",
+        "purpose": "Podium cards."
+      },
+      {
+        "name": "flag",
+        "value": "0 3px 8px rgba(0,0,0,.4)",
+        "purpose": "Km flags."
+      },
+      {
+        "name": "torn-tab",
+        "value": "drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 16px 18px rgba(0,0,0,.45))",
+        "purpose": "filter for masked tear shapes."
+      },
+      {
+        "name": "punched-hole",
+        "value": "inset 0 2px 3px rgba(0,0,0,.6), 0 0 0 1.5px rgba(17,17,17,.18)",
+        "purpose": "Pin holes."
+      },
+      {
+        "name": "runner-halo",
+        "value": "0 0 0 6px rgba(255,77,18,.22), 0 6px 14px rgba(0,0,0,.5)",
+        "purpose": "Runner dot."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "All state and entrance motion."
+      },
+      {
+        "name": "pin-on",
+        "value": "1.1s ease-out, rotate(-6deg) translateY(28px) scale(.97) blur(4px) to rest",
+        "purpose": "Bib entrance."
+      },
+      {
+        "name": "tab-tug",
+        "value": ".25s, translateY(4px) rotate(.8deg)",
+        "purpose": "Tear tab press."
+      },
+      {
+        "name": "flag-current",
+        "value": ".35s, background to race-orange, scale(1.12)",
+        "purpose": "Km flag becoming current."
+      },
+      {
+        "name": "flow-draw",
+        "value": "1.6s stroke-dashoffset",
+        "purpose": "Diagram flows draw in once a leg is reached."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tear Tab",
+      "kind": "button",
+      "refersTo": "tear-tab",
+      "description": "The primary action: a Tyvek strip torn at a perforation; inverts on hover, tugs down on press.",
+      "html": "<a class=\"ds-tear\" href=\"#\"><span class=\"ds-chip\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class=\"ds-tear-label\">Xuất phát <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M12 4v15M5 12l7 7 7-7\"/></svg></span></a>",
+      "css": ".ds-tear{--bite:radial-gradient(circle 12px at 0 0,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 0,#0000 97%,#000) right/51% 100% no-repeat;-webkit-mask:var(--bite);mask:var(--bite);display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:360px;background:#f4f4f0;color:#111;text-decoration:none;border-top:3px dashed rgba(17,17,17,.38);border-radius:0 0 12px 12px;padding:18px 28px 22px;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:900;font-size:2rem;line-height:1;letter-spacing:.08em;text-transform:uppercase;transform-origin:50% 0;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,color .2s;}.ds-tear-label{display:inline-flex;align-items:center;gap:12px}.ds-tear svg{width:1.05em;height:1.05em;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-chip{display:flex;gap:3px;height:30px}.ds-chip i{width:3px;background:#111}.ds-chip i:nth-child(3n){width:6px}.ds-chip i:nth-child(4n){width:1px}.ds-tear:hover{background:#111;color:#f4f4f0}.ds-tear:hover .ds-chip i{background:#f4f4f0}.ds-tear:hover svg{transform:translateY(3px)}.ds-tear:active{transform:translateY(4px) rotate(.8deg)}.ds-tear:focus-visible{outline:3px solid #ff4d12;outline-offset:4px}"
+    },
+    {
+      "name": "Km Flag",
+      "kind": "custom",
+      "refersTo": "km-flag",
+      "description": "Leg marker on the course line; turns Race Orange when its leg is current.",
+      "html": "<span class=\"ds-km\">KM 8</span> <span class=\"ds-km is-current\">KM 15</span>",
+      "css": ".ds-km{display:inline-block;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:900;font-size:1.5rem;line-height:1;letter-spacing:.08em;background:#f4f4f0;color:#111;padding:10px 14px 9px;border-radius:3px;box-shadow:0 3px 8px rgba(0,0,0,.4);transition:background-color .35s cubic-bezier(.16,1,.3,1),transform .35s cubic-bezier(.16,1,.3,1);margin:12px}.ds-km.is-current{background:#ff4d12;transform:scale(1.12)}"
+    },
+    {
+      "name": "Skill Chip (used)",
+      "kind": "chip",
+      "refersTo": "skill-chip",
+      "description": "Solid pill: a skill actually used.",
+      "html": "<span class=\"ds-skill\">Camunda 7</span>",
+      "css": ".ds-skill{display:inline-block;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;font-size:1.45rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px 11px;border:3px solid #f4f4f0;border-radius:999px;color:#f4f4f0;background:#18191b}"
+    },
+    {
+      "name": "Skill Chip (exploring)",
+      "kind": "chip",
+      "refersTo": "skill-chip",
+      "description": "Dashed pill: a skill still being explored.",
+      "html": "<span class=\"ds-skill-wip\">Công cụ AI</span>",
+      "css": ".ds-skill-wip{display:inline-block;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;font-size:1.45rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;padding:12px 16px 11px;border:3px dashed #f4f4f0;border-radius:999px;color:rgba(244,244,240,.92);background:#18191b}"
+    },
+    {
+      "name": "Podium Card",
+      "kind": "card",
+      "refersTo": "podium-card",
+      "description": "A stamped Tyvek result card, slightly tilted.",
+      "html": "<p class=\"ds-podium\"><b>Top 4</b><span>Chung kết</span></p>",
+      "css": ".ds-podium{display:inline-block;margin:16px;background:#f4f4f0;color:#111;border-radius:10px;padding:16px 22px 14px;box-shadow:0 2px 3px rgba(0,0,0,.3),0 18px 34px -16px rgba(0,0,0,.7);transform:rotate(-1.5deg)}.ds-podium b{display:block;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:900;font-size:4.4rem;line-height:1;text-transform:uppercase}.ds-podium span{display:block;margin-top:6px;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;font-size:.95rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;color:#3a3a38}"
+    },
+    {
+      "name": "Leg Heading",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Leg title painted on asphalt with its lead sentence.",
+      "html": "<div class=\"ds-leg\"><h2>Học</h2><p>Thương mại điện tử: chỗ kinh doanh gặp công nghệ.</p></div>",
+      "css": ".ds-leg{background:#18191b;padding:24px}.ds-leg h2{margin:0 0 14px;font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:900;font-size:6rem;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;color:#f4f4f0}.ds-leg p{margin:0;font-family:Barlow,system-ui,sans-serif;font-weight:600;font-size:1.5rem;line-height:1.4;max-width:34ch;color:rgba(244,244,240,.92)}"
+    },
+    {
+      "name": "Course Line and Runner",
+      "kind": "custom",
+      "refersTo": "course-blue",
+      "description": "The blue course line with the orange runner dot that tracks scroll.",
+      "html": "<div class=\"ds-course\"><div class=\"ds-line\"></div><div class=\"ds-runner\"></div></div>",
+      "css": ".ds-course{position:relative;height:160px;width:80px;background:#18191b}.ds-line{position:absolute;top:0;bottom:0;left:40px;width:6px;margin-left:-3px;background:#4a66ff;border-radius:3px;opacity:.9}.ds-runner{position:absolute;left:40px;top:70px;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#ff4d12;box-shadow:0 0 0 6px rgba(255,77,18,.22),0 6px 14px rgba(0,0,0,.5)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Race Bib",
+    "overview": "The page is a runner's bib pinned on, then the course run in it. Two materials carry everything: dark, grainy asphalt as the ground, and Tyvek-white bib stock for the objects that sit on it (the bib, km flags, podium cards, the torn-off finish tab). Text on the road is painted on: big, white, condensed, uppercase. Text on Tyvek is printed in carbon ink.\n\nDensity is low and the rhythm is vertical. One scroll is one race: a cobalt-blue course line runs down the left edge, an orange runner dot moves along it as you scroll, and each section is a leg marked by a km flag. Hierarchy comes from size, weight and case inside one superfamily (Barlow Condensed for display and labels, Barlow for reading copy), never from extra decoration.\n\nRace-world devices are the native vocabulary and are meant to be reused: pin holes, perforated tear lines with bitten corners, a timing-chip barcode strip, km marker flags, a painted start line, a checkered finish band. The world rejects the dark dev-portfolio look: no avatar hero, no typing effect, no card grid.",
+    "keyCharacteristics": [
+      "Asphalt ground with fine noise; Tyvek objects with a faint fibre texture.",
+      "One condensed sports superfamily; uppercase 900 weight for every heading.",
+      "Orange means \"you are here\"; blue means \"the course\".",
+      "Objects sit slightly tilted (-2.2deg to +1deg), as if pinned or dropped by hand.",
+      "Interaction has real physical travel: tabs tug down at the perforation."
+    ],
+    "rules": [
+      {
+        "name": "The You-Are-Here Rule",
+        "body": "Orange marks only the name band and the present position (current km flag, runner, focus, selection, scroll thumb). A km flag that is not current stays Tyvek. Never use orange as a general accent, link color or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Course Rule",
+        "body": "Blue is the course line and nothing else.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Every word is Barlow or Barlow Condensed. Condensed for anything shouted, labelled or numbered; Barlow only for sentences.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Shout Rule",
+        "body": "Headings are 900 uppercase; tracking goes negative only at display sizes (-0.01em to -0.035em) and positive (0.04em to 0.3em) for small labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-On-Road Rule",
+        "body": "Only Tyvek objects cast shadows; every shadow pairs a tight contact shadow with a long soft one.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put new content on the course as a leg with a km flag, a 900 uppercase headline and a lead sentence.",
+      "Do print on Tyvek in Carbon Ink and paint on asphalt in Tyvek / Road Paint; keep body copy in Road Paint Dim at max 62ch.",
+      "Do reuse the race devices (pin holes, perforations, bitten tear edges, chip strip, painted rules, checkered band) for new surfaces.",
+      "Do mark honest skill level with solid vs dashed outlines.",
+      "Do give every press real travel and honor reduced motion (animations off, diagrams fully drawn)."
+    ],
+    "donts": [
+      "Don't use Race Orange for anything other than the name band, present position, focus and selection.",
+      "Don't introduce a third typeface or system display fonts.",
+      "Don't add hard offset shadows or shadows on road-painted elements.",
+      "Don't build an avatar hero, typing effect or card grid.",
+      "Don't use icon glyphs or emoji; arrows are inline square-capped SVG."
+    ]
+  }
+}

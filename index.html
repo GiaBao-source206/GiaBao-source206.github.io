@@ -1,12 +1,580 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gia Bảo · 206</title>
+<meta name="description" content="Gia Bảo – sinh viên năm 3 Thương mại điện tử, UIT. Mê gym, chạy bộ và vọc công nghệ.">
+<meta name="theme-color" content="#18191b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ff4d12'/%3E%3Ctext x='16' y='23' font-family='Arial Narrow,sans-serif' font-weight='900' font-size='17' text-anchor='middle' fill='%23111'%3E206%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/BarlowCondensed-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root {
+  --asphalt: #18191b;
+  --asphalt-2: #222326;
+  --tyvek: #f4f4f0;
+  --ink: #111111;
+  --ink-soft: #3a3a38;
+  --race: #ff4d12;
+  --blue-line: #4a66ff;
+  --paint: rgba(244, 244, 240, .92);
+  --paint-dim: rgba(244, 244, 240, .74);
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, sans-serif;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --gutter: clamp(16px, 4vw, 48px);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scrollbar-color: var(--race) var(--asphalt); }
+body {
+  background-color: var(--asphalt);
+  /* road grain: fine noise over asphalt */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color: var(--paint);
+  font: 400 1.125rem/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--race);
+  overflow-x: hidden;
+}
+::selection { background: var(--race); color: var(--ink); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--asphalt); }
+::-webkit-scrollbar-thumb { background: var(--race); border-radius: 0; }
+:focus-visible { outline: 3px solid var(--race); outline-offset: 4px; }
+a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ───────────── START: the bib ───────────── */
+.start {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(56px, 9vh, 96px) var(--gutter) clamp(72px, 12vh, 120px);
+  position: relative;
+  overflow-x: clip; /* the tilted bib must not push the page sideways */
+}
+/* painted start line */
+.start::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: clamp(28px, 5vh, 48px);
+  height: 10px;
+  background: var(--paint);
+  opacity: .85;
+}
+.start-word {
+  position: absolute; bottom: calc(clamp(28px, 5vh, 48px) + 18px); left: var(--gutter);
+  font: 900 clamp(1.6rem, 4vw, 2.6rem)/1 var(--display);
+  letter-spacing: .3em; color: var(--paint);
+}
+
+.bib {
+  --pin: 22px;
+  width: min(100%, 760px);
+  background-color: var(--tyvek);
+  /* Tyvek fibre */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .09' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .48 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  color: var(--ink);
+  border-radius: 14px;
+  position: relative;
+  transform: rotate(-2.2deg);
+  box-shadow: 0 2px 3px rgba(0,0,0,.35), 0 30px 60px -18px rgba(0,0,0,.7);
+  animation: pin-on 1.1s var(--ease-out) both;
+}
+@keyframes pin-on {
+  from { transform: rotate(-6deg) translateY(28px) scale(.97); filter: blur(4px); }
+  to   { transform: rotate(-2.2deg); filter: blur(0); }
+}
+/* punched pin holes: the road shows through */
+.pin {
+  position: absolute; width: var(--pin); height: var(--pin); border-radius: 50%;
+  background: var(--asphalt);
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.6), 0 0 0 1.5px rgba(17,17,17,.18);
+  z-index: 2;
+}
+.pin:nth-of-type(1) { top: 14px; left: 14px; }
+.pin:nth-of-type(2) { top: 14px; right: 14px; }
+.pin:nth-of-type(3) { bottom: 14px; left: 14px; }
+.pin:nth-of-type(4) { bottom: 14px; right: 14px; }
+
+.bib-band {
+  background: var(--race);
+  border-radius: 14px 14px 0 0;
+  padding: 18px 56px 12px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+}
+.bib-name {
+  font: 900 clamp(2.4rem, 8.5vw, 4.6rem)/1.08 var(--display);
+  text-transform: uppercase; letter-spacing: .01em;
+}
+.bib-tag {
+  font: 700 clamp(.85rem, 1.8vw, 1.05rem)/1.2 var(--display);
+  letter-spacing: .14em; text-transform: uppercase; text-align: right;
+}
+.bib-number {
+  font: 900 clamp(8rem, 54vw, 28rem)/.8 var(--display);
+  letter-spacing: -.035em;
+  text-align: center;
+  padding: clamp(14px, 3vw, 28px) 12px clamp(4px, 1vw, 10px);
+  font-variant-numeric: tabular-nums;
+}
+.bib-meta {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px;
+  padding: 4px 48px 22px;
+  font: 700 clamp(.95rem, 2.4vw, 1.3rem)/1.2 var(--display);
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.bib-meta span + span::before { content: "·"; margin-right: 18px; }
+
+/* perforation + tear tab: the whole tab is the control */
+.tear {
+  position: relative;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  border-top: 3px dashed rgba(17,17,17,.38);
+  padding: 18px 56px 24px;
+  border-radius: 0 0 14px 14px;
+  color: var(--ink); text-decoration: none;
+  font: 900 clamp(1.4rem, 3.4vw, 2rem)/1 var(--display);
+  letter-spacing: .08em; text-transform: uppercase;
+  transform-origin: 50% 0;
+  transition: transform .25s var(--ease-out), background-color .2s, color .2s;
+}
+.tear {
+  --bite: radial-gradient(circle 12px at 0 0, #0000 97%, #000) left / 51% 100% no-repeat,
+          radial-gradient(circle 12px at 100% 0, #0000 97%, #000) right / 51% 100% no-repeat;
+  -webkit-mask: var(--bite); mask: var(--bite);
+}
+.tear .label { display: inline-flex; align-items: center; gap: 12px; }
+.tear svg { width: 1.05em; height: 1.05em; transition: transform .3s var(--ease-out); }
+a.tear:hover { background: var(--ink); color: var(--tyvek); }
+a.tear:hover .chip i { background: var(--tyvek); }
+a.tear:hover svg { transform: translateY(3px); }
+/* a tug on the tab: it gives at the perforation */
+a.tear:active { transform: translateY(4px) rotate(.8deg); }
+.chip {
+  display: flex; gap: 3px; height: 30px; align-items: stretch;
+}
+.chip i { width: 3px; background: var(--ink); }
+.chip i:nth-child(3n) { width: 6px; }
+.chip i:nth-child(4n) { width: 1px; }
+
+/* the finish tab: a torn-off strip of the bib */
+.tab {
+  display: inline-flex; flex-direction: column; align-items: stretch;
+  color: var(--ink); text-decoration: none;
+  min-width: min(100%, 420px);
+  transform: rotate(-1.2deg);
+  /* drop-shadow follows the bitten edge; box-shadow would fill the bites */
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 16px 18px rgba(0,0,0,.45));
+}
+.tab .tear { background: var(--tyvek); border-radius: 0 0 12px 12px; padding: 18px 28px 22px; }
+.tab:hover .tear { background: var(--ink); color: var(--tyvek); }
+.tab:hover .tear .chip i { background: var(--tyvek); }
+.tab svg { transform: rotate(-90deg); }
+.tab:hover svg { transform: translateX(3px) rotate(-90deg); }
+.tab:active .tear { transform: translateY(4px) rotate(.8deg); }
+.tab:focus-visible { outline-offset: 8px; }
+
+/* ───────────── COURSE ───────────── */
+.course {
+  --line-x: clamp(22px, 9vw, 150px);
+  position: relative;
+  padding: clamp(40px, 8vh, 80px) var(--gutter) 0 calc(var(--line-x) + clamp(36px, 5vw, 72px));
+}
+.blue-line {
+  position: absolute; top: 0; bottom: 0; left: var(--line-x);
+  width: 6px; margin-left: -3px;
+  background: var(--blue-line);
+  border-radius: 3px;
+  opacity: .9;
+}
+.runner {
+  position: absolute; left: var(--line-x); top: 0;
+  width: 26px; height: 26px; margin: -13px 0 0 -13px;
+  border-radius: 50%;
+  background: var(--race);
+  box-shadow: 0 0 0 6px rgba(255,77,18,.22), 0 6px 14px rgba(0,0,0,.5);
+  will-change: transform;
+  z-index: 3;
+}
+
+.leg {
+  position: relative;
+  max-width: 1000px;
+  padding: clamp(56px, 10vh, 112px) 0;
+}
+.km {
+  position: absolute; top: clamp(56px, 10vh, 112px);
+  left: calc(-1 * clamp(36px, 5vw, 72px));
+  transform: translateX(-50%);
+  font: 900 clamp(1.1rem, 2vw, 1.5rem)/1 var(--display);
+  letter-spacing: .08em; white-space: nowrap;
+  background: var(--tyvek); color: var(--ink);
+  padding: 10px 14px 9px;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px rgba(0,0,0,.4);
+  transition: background-color .35s var(--ease-out), transform .35s var(--ease-out);
+  z-index: 2;
+}
+.leg.is-current .km { background: var(--race); transform: translateX(-50%) scale(1.12); }
+
+.leg h2 {
+  font: 900 clamp(3rem, 9vw, 6rem)/1.02 var(--display);
+  text-transform: uppercase; letter-spacing: -.01em;
+  color: var(--tyvek);
+  text-wrap: balance;
+  margin: 0 0 14px;
+}
+.lead {
+  font: 600 clamp(1.25rem, 2.4vw, 1.5rem)/1.4 var(--body);
+  color: var(--paint);
+  max-width: 34ch;
+  margin-bottom: 28px;
+  text-wrap: pretty;
+}
+.leg p { max-width: 62ch; color: var(--paint-dim); }
+.leg p + p { margin-top: 1em; }
+.leg strong { color: var(--tyvek); font-weight: 600; }
+
+/* BPMN sketch, painted on the road */
+.bpmn { margin-top: 40px; max-width: 860px; }
+.bpmn .bpmn-v { display: none; }
+.bpmn-v .flow { marker-end: url(#arrow-v); }
+.bpmn svg { width: 100%; height: auto; display: block; overflow: visible; }
+.bpmn text { font: 600 13px var(--body); fill: var(--tyvek); }
+.bpmn .lbl { font: 700 12px var(--display); letter-spacing: .1em; fill: var(--paint-dim); }
+.bpmn .stroke { fill: none; stroke: var(--tyvek); stroke-width: 2; }
+.bpmn .task { fill: var(--asphalt-2); stroke: var(--tyvek); stroke-width: 2; }
+.bpmn .flow { fill: none; stroke: var(--paint-dim); stroke-width: 1.6; marker-end: url(#arrow); }
+.bpmn .flow-path { stroke-dasharray: 520; stroke-dashoffset: 520; transition: stroke-dashoffset 1.6s var(--ease-out); }
+.leg.has-run .flow-path { stroke-dashoffset: 0; }
+.bpmn figcaption { margin-top: 12px; font-size: .9rem; color: var(--paint-dim); }
+
+/* skills: solid = đã dùng, dashed = đang vọc */
+.legend {
+  display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 22px;
+  font: 700 .95rem/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--paint-dim);
+}
+.legend span { display: inline-flex; align-items: center; gap: 10px; }
+.legend span::before { content: ""; width: 28px; height: 0; border-top: 3px solid var(--tyvek); }
+.legend span.wip::before { border-top-style: dashed; }
+.skills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; max-width: 900px; }
+.skills li {
+  font: 700 clamp(1.15rem, 2.4vw, 1.45rem)/1 var(--display);
+  letter-spacing: .04em; text-transform: uppercase;
+  padding: 12px 16px 11px;
+  border: 3px solid var(--tyvek);
+  border-radius: 999px;
+  color: var(--tyvek);
+}
+.skills li.wip { border-style: dashed; color: var(--paint); }
+.skills li small { font: 500 .8em/1 var(--display); letter-spacing: .06em; color: var(--paint-dim); margin-left: 6px; text-transform: none; }
+
+/* training words, painted big */
+.train {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 3vw, 40px);
+  margin-top: 36px; max-width: 1000px;
+}
+.train div { border-top: 10px solid var(--tyvek); padding-top: 14px; }
+.train b {
+  display: block;
+  font: 900 clamp(2.6rem, 7vw, 4.8rem)/1.02 var(--display); text-transform: uppercase;
+  color: var(--tyvek);
+}
+.train span { display: block; margin-top: 8px; color: var(--paint-dim); font-size: 1rem; }
+
+/* splits: one row per thing done */
+.splits { list-style: none; padding: 0; margin-top: 12px; max-width: 900px; }
+.splits li { border-top: 2px solid rgba(244,244,240,.22); padding: 22px 0 26px; }
+.splits li:first-child { border-top: 10px solid var(--tyvek); }
+.split-role {
+  font: 700 .95rem/1.2 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--paint-dim);
+}
+.splits h3 {
+  font: 900 clamp(2rem, 5vw, 3rem)/1.05 var(--display); text-transform: uppercase;
+  color: var(--tyvek); margin: 0 0 6px;
+}
+.split-role { display: block; margin-bottom: 10px; }
+
+/* podium: the result, stamped */
+.podium { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 26px; }
+.podium p {
+  background: var(--tyvek); color: var(--ink);
+  border-radius: 10px; padding: 16px 22px 14px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.3), 0 18px 34px -16px rgba(0,0,0,.7);
+  max-width: none;
+}
+.podium p + p { margin-top: 0; }
+.podium-rank { transform: rotate(-1.5deg); }
+.podium-award { transform: rotate(1deg); }
+.podium b { display: block; font: 900 clamp(2.6rem, 7vw, 4.4rem)/1 var(--display); text-transform: uppercase; }
+.podium span { display: block; margin-top: 6px; font: 700 .95rem/1.2 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* ───────────── FINISH ───────────── */
+.finish {
+  position: relative;
+  margin-top: clamp(40px, 8vh, 80px);
+  padding: clamp(80px, 14vh, 140px) var(--gutter) clamp(48px, 8vh, 72px);
+  text-align: center;
+}
+.finish::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 36px;
+  background: repeating-conic-gradient(var(--tyvek) 0 25%, var(--ink) 0 50%) 0 0 / 36px 36px;
+}
+.finish h2 {
+  font: 900 clamp(4rem, 15vw, 6rem)/1 var(--display);
+  text-transform: uppercase; color: var(--tyvek); letter-spacing: -.01em;
+}
+.finish p { color: var(--paint-dim); margin: 14px auto 32px; max-width: 40ch; }
+footer {
+  padding: 28px var(--gutter) 36px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  font: 700 .9rem/1.3 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--paint-dim);
+  border-top: 1px solid rgba(244,244,240,.14);
+}
+
+@media (max-width: 560px) {
+  .bib-band { padding: 16px 42px 10px; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .bib-tag { text-align: left; }
+  .bib-meta { padding: 4px 28px 20px; }
+  .bib-meta span + span::before { margin-right: 10px; }
+  .bib-meta { gap: 6px 10px; }
+  .tear { padding: 14px 28px 30px; }
+  .chip { display: none; }
+  .tear { justify-content: center; }
+  .bib { --pin: 16px; }
+  .pin:nth-of-type(1), .pin:nth-of-type(2) { top: 10px; }
+  .pin:nth-of-type(3), .pin:nth-of-type(4) { bottom: 8px; }
+  .pin:nth-of-type(1), .pin:nth-of-type(3) { left: 10px; }
+  .pin:nth-of-type(2), .pin:nth-of-type(4) { right: 10px; }
+  .course { --line-x: 22px; padding-left: 56px; }
+  /* flag stays on the line, turned to run along it */
+  .km { left: -34px; top: 76px; font-size: 1rem; padding: 8px 10px 7px; transform: translateX(-50%) rotate(-90deg); }
+  .leg.is-current .km { transform: translateX(-50%) rotate(-90deg) scale(1.08); }
+  .leg { padding-top: 64px; }
+  .bpmn-h { display: none !important; }
+  .bpmn-v { display: block !important; max-width: 340px; }
+  .train { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bib { animation: none; }
+  .bpmn .flow-path { transition: none; stroke-dashoffset: 0; }
+  .km, .tear, .tear svg { transition: none; }
+}
+</style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p> toi yeu tuan anh</p>
+
+<main>
+  <section class="start" aria-label="Giới thiệu">
+    <article class="bib">
+      <span class="pin" aria-hidden="true"></span><span class="pin" aria-hidden="true"></span><span class="pin" aria-hidden="true"></span><span class="pin" aria-hidden="true"></span>
+      <header class="bib-band">
+        <h1 class="bib-name">Gia Bảo</h1>
+        <p class="bib-tag">Học · Làm · Vọc · Tập</p>
+      </header>
+      <p class="bib-number" aria-label="Số áo 206">206</p>
+      <p class="bib-meta"><span>UIT</span><span>Thương mại điện tử</span><span>Năm 3</span></p>
+      <a class="tear" href="#km0">
+        <span class="chip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="label">Xuất phát
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7"/></svg>
+        </span>
+      </a>
+    </article>
+    <span class="start-word" aria-hidden="true">START</span>
+  </section>
+
+  <div class="course" id="course">
+    <div class="blue-line" aria-hidden="true"></div>
+    <div class="runner" aria-hidden="true"></div>
+
+    <section class="leg" id="km0" aria-labelledby="h-km0">
+      <span class="km" aria-hidden="true">KM 0</span>
+      <h2 id="h-km0">Chào, mình là Bảo</h2>
+      <p class="lead">Sinh viên năm 3 ngành Thương mại điện tử ở UIT, thích thể thao và thích vọc vạch công nghệ.</p>
+      <p>Tên đầy đủ của mình là <strong>Nguyễn Văn Gia Bảo</strong>. Mình học Cử nhân Thương mại điện tử ở <strong>Trường Đại học Công nghệ Thông tin – ĐHQG-HCM</strong> từ tháng 9/2024, và có <strong>IELTS 6.5</strong>.</p>
+      <p>Trang này là đường chạy của mình: kéo xuống để đi hết từng chặng, từ chuyện học, chuyện làm, chuyện vọc, chuyện tập, đến bục podium.</p>
+    </section>
+
+    <section class="leg" id="km-hoc" aria-labelledby="h-hoc">
+      <span class="km" aria-hidden="true">KM 8</span>
+      <h2 id="h-hoc">Học</h2>
+      <p class="lead">Thương mại điện tử: chỗ kinh doanh gặp công nghệ.</p>
+      <p>Mình thích hiểu một việc kinh doanh <strong>chạy như thế nào</strong> từ đầu đến cuối, rồi vẽ nó ra thành quy trình rõ ràng bằng <strong>BPMN</strong> trên <strong>Camunda 7</strong>, nối với dữ liệu qua <strong>SQL</strong> và <strong>Google Sheets API</strong>.</p>
+      <figure class="bpmn">
+        <svg class="bpmn-h" viewBox="-24 0 668 170" role="img" aria-labelledby="bpmn-t">
+          <title id="bpmn-t">Sơ đồ BPMN minh hoạ: Nhận đơn, kiểm tra còn hàng, nếu có thì đóng gói và giao, nếu không thì báo khách</title>
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="rgba(244,244,240,.74)"/></marker>
+          </defs>
+          <circle class="stroke" cx="22" cy="60" r="16"/>
+          <text class="lbl" x="22" y="100" text-anchor="middle">ĐẶT HÀNG</text>
+          <path class="flow flow-path" d="M38 60H88"/>
+          <rect class="task" x="90" y="34" width="120" height="52" rx="9"/>
+          <text x="150" y="65" text-anchor="middle">Nhận đơn</text>
+          <path class="flow flow-path" d="M210 60H262"/>
+          <path class="stroke" d="M290 32L318 60L290 88L262 60Z"/>
+          <path class="stroke" d="M279 49L301 71M301 49L279 71" stroke-width="2.4"/>
+          <text class="lbl" x="290" y="20" text-anchor="middle">CÒN HÀNG?</text>
+          <path class="flow flow-path" d="M318 60H378"/>
+          <text class="lbl" x="348" y="52" text-anchor="middle">CÓ</text>
+          <rect class="task" x="380" y="34" width="140" height="52" rx="9"/>
+          <text x="450" y="65" text-anchor="middle">Đóng gói &amp; giao</text>
+          <path class="flow flow-path" d="M520 60H580"/>
+          <circle class="stroke" cx="598" cy="60" r="16" stroke-width="5"/>
+          <text class="lbl" x="598" y="100" text-anchor="middle">ĐÃ GIAO</text>
+          <path class="flow flow-path" d="M290 88V136H378"/>
+          <text class="lbl" x="300" y="122">KHÔNG</text>
+          <rect class="task" x="380" y="112" width="140" height="48" rx="9"/>
+          <text x="450" y="141" text-anchor="middle">Báo khách</text>
+        </svg>
+        <svg class="bpmn-v" viewBox="0 0 320 420" role="img" aria-labelledby="bpmn-tv">
+          <title id="bpmn-tv">Sơ đồ BPMN minh hoạ: Nhận đơn, kiểm tra còn hàng, nếu có thì đóng gói và giao, nếu không thì báo khách</title>
+          <defs>
+            <marker id="arrow-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="rgba(244,244,240,.74)"/></marker>
+          </defs>
+          <circle class="stroke" cx="110" cy="24" r="16"/>
+          <text class="lbl" x="138" y="28">ĐẶT HÀNG</text>
+          <path class="flow flow-path" marker-end="url(#arrow-v)" d="M110 40V78"/>
+          <rect class="task" x="50" y="80" width="120" height="50" rx="9"/>
+          <text x="110" y="110" text-anchor="middle">Nhận đơn</text>
+          <path class="flow flow-path" marker-end="url(#arrow-v)" d="M110 130V168"/>
+          <path class="stroke" d="M110 170L138 198L110 226L82 198Z"/>
+          <path class="stroke" d="M99 187L121 209M121 187L99 209" stroke-width="2.4"/>
+          <text class="lbl" x="76" y="202" text-anchor="end">CÒN HÀNG?</text>
+          <path class="flow flow-path" marker-end="url(#arrow-v)" d="M110 226V278"/>
+          <text class="lbl" x="118" y="256">CÓ</text>
+          <rect class="task" x="45" y="280" width="130" height="50" rx="9"/>
+          <text x="110" y="310" text-anchor="middle">Đóng gói &amp; giao</text>
+          <path class="flow flow-path" marker-end="url(#arrow-v)" d="M110 330V362"/>
+          <circle class="stroke" cx="110" cy="382" r="16" stroke-width="5"/>
+          <text class="lbl" x="138" y="386">ĐÃ GIAO</text>
+          <path class="flow flow-path" marker-end="url(#arrow-v)" d="M138 198H250V278"/>
+          <text class="lbl" x="160" y="190">KHÔNG</text>
+          <rect class="task" x="190" y="280" width="120" height="50" rx="9"/>
+          <text x="250" y="310" text-anchor="middle">Báo khách</text>
+        </svg>
+        <figcaption>Minh hoạ: kiểu quy trình mình mô hình hoá bằng BPMN.</figcaption>
+      </figure>
+    </section>
+
+    <section class="leg" id="km-lam" aria-labelledby="h-lam">
+      <span class="km" aria-hidden="true">KM 15</span>
+      <h2 id="h-lam">Làm</h2>
+      <p class="lead">Vài chặng mình đã chạy thật, trên màn hình và ngoài quầy hàng.</p>
+      <ol class="splits">
+        <li>
+          <h3>is207-store</h3>
+          <span class="split-role">Frontend Developer</span>
+          <p>Làm giao diện cho một cửa hàng TMĐT: layout responsive, điều hướng dễ hiểu, trải nghiệm đồng nhất qua các trang mua sắm chính. Ghép component với phần chức năng của app và quản lý dự án bằng Git.</p>
+        </li>
+        <li>
+          <h3>Opencharity</h3>
+          <span class="split-role">UI Designer · Figma</span>
+          <p>Thiết kế giao diện cho nền tảng Opencharity trên Figma: wireframe, component, bố cục rõ ràng và dễ tiếp cận để nội dung được trình bày tốt.</p>
+        </li>
+        <li>
+          <h3>Toyist Zone</h3>
+          <span class="split-role">Sales Assistant · 10–11/2025</span>
+          <p>Tư vấn khách chọn đồ chơi hợp nhu cầu, sắp xếp hàng, kiểm kho và hỗ trợ thanh toán. Hiểu TMĐT từ phía người bán thật ngoài đời.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="leg" id="km-voc" aria-labelledby="h-voc">
+      <span class="km" aria-hidden="true">KM 21</span>
+      <h2 id="h-voc">Vọc</h2>
+      <p class="lead">Thấy công nghệ gì hay là mình mở ra nghịch thử.</p>
+      <p class="legend" aria-hidden="true"><span>Đã dùng</span><span class="wip">Đang vọc</span></p>
+      <ul class="skills">
+        <li>BPMN</li>
+        <li>Camunda 7</li>
+        <li>Google Sheets API</li>
+        <li>C++</li>
+        <li>SQL · MySQL · SSMS</li>
+        <li>Git</li>
+        <li>Figma</li>
+        <li>Excel</li>
+        <li>HTML · CSS · JS</li>
+        <li>TMĐT &amp; Marketing</li>
+        <li class="wip">Công cụ AI<span class="sr-only"> (đang vọc)</span></li>
+        <li class="wip">Đồ công nghệ<span class="sr-only"> (đang vọc)</span></li>
+      </ul>
+    </section>
+
+    <section class="leg" id="km-tap" aria-labelledby="h-tap">
+      <span class="km" aria-hidden="true">KM 30</span>
+      <h2 id="h-tap">Tập</h2>
+      <p class="lead">Ngoài giờ học, mình ở phòng gym hoặc trên đường chạy.</p>
+      <div class="train">
+        <div><b>Gym</b><span>Sức mạnh, đều đặn từng buổi.</span></div>
+        <div><b>Chạy bộ</b><span>Sức bền, từng cây số một.</span></div>
+      </div>
+    </section>
+
+    <section class="leg" id="km-podium" aria-labelledby="h-podium">
+      <span class="km" aria-hidden="true">KM 40</span>
+      <h2 id="h-podium">Podium</h2>
+      <p class="lead">EIU International Case Competition 2026.</p>
+      <div class="podium">
+        <p class="podium-rank"><b>Top 4</b><span>Chung kết</span></p>
+        <p class="podium-award"><b>Best Presentation</b><span>Giải thuyết trình xuất sắc nhất</span></p>
+      </div>
+      <p>Cuộc thi giải case kinh doanh quốc tế do Becamex Business School (BBS) tổ chức. Đội mình phân tích chiến lược, giải một bài toán kinh doanh có thật và trình bày trước ban giám khảo.</p>
+    </section>
+  </div>
+
+  <section class="finish" id="finish" aria-labelledby="h-finish">
+    <h2 id="h-finish">Về đích</h2>
+    <p>Cảm ơn bạn đã chạy cùng mình tới đây. Ghé GitHub xem mình đang làm gì nhé.</p>
+    <a class="tab" href="https://github.com/GiaBao-source206" rel="noopener">
+      <span class="tear">
+        <span class="chip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="label">GitHub của Bảo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7"/></svg>
+        </span>
+      </span>
+    </a>
+  </section>
+</main>
+
+<footer>
+  <span>Gia Bảo · Bib 206</span>
+  <span>UIT · 2026</span>
+</footer>
+
+<script>
+(() => {
+  const course = document.getElementById('course');
+  const runner = course.querySelector('.runner');
+  const legs = [...course.querySelectorAll('.leg')];
+  let ticking = false;
+
+  // One timeline: scroll position drives the runner and which leg is current.
+  function update() {
+    ticking = false;
+    const r = course.getBoundingClientRect();
+    const mid = innerHeight * 0.5;
+    const p = Math.min(Math.max((mid - r.top) / r.height, 0), 1);
+    runner.style.transform = `translateY(${p * r.height}px)`;
+    let current = null;
+    for (const leg of legs) {
+      const t = leg.getBoundingClientRect().top;
+      if (t < mid) current = leg;
+      if (t < innerHeight * 0.8) leg.classList.add('has-run');
+    }
+    legs.forEach(l => l.classList.toggle('is-current', l === current));
+  }
+  const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  addEventListener('scroll', req, { passive: true });
+  addEventListener('resize', req);
+  update();
+})();
+</script>
 </body>
 </html>

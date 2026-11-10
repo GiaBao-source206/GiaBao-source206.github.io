@@ -23,3 +23,7 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+
+# local tooling output
+.playwright-mcp/
+.DS_Store
