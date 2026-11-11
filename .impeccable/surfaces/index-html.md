@@ -15,7 +15,7 @@ THESIS: The page is race bib #206 and Gia Bảo's course: Km0 xuất phát → H
 
 OWN-WORLD: Tyvek-white bib stock (#f4f4f0) with faint fiber texture, carbon ink (#111), race orange (#ff4d12) reserved by law for the current leg and the name band, cobalt (#1f3dff) for the course line and links. One condensed sports family at every size; hierarchy by size, weight, case. Pin holes, perforated tear lines, timing-chip strip, km marker flags.
 
-STORY: Visitor sees a real bib, learns name/school/major, scrolls along the course, meets skills (solid = đã dùng, dashed = đang vọc), gym/running, tears the bottom tab to reach GitHub.
+STORY: Visitor sees a real bib, learns name/school/major, scrolls along the course, meets skills (solid = đã dùng, dashed = đang vọc), running/cycling, tears the bottom tab to reach GitHub.
 
 FIRST VIEWPORT: One bib fills ~80% of the viewport, slightly tilted, four pin holes. Top band orange "GIA BẢO"; giant "206" numerals spanning bib width; bottom strip "UIT · THƯƠNG MẠI ĐIỆN TỬ · NĂM 3"; perforated tear tab "XUẤT PHÁT ↓" as the primary action. Thin course line starts below.
 

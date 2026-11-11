@@ -16,7 +16,7 @@ Kéo xuống là chạy: mỗi chặng trên đường đua là một phần v�
 ## Về mình
 
 Mình là **Nguyễn Văn Gia Bảo**, sinh viên năm 3 ngành **Thương mại điện tử** tại **UIT – ĐHQG-HCM**.
-Mình thích chỗ kinh doanh gặp công nghệ, mê gym, chạy bộ và hay vọc vạch đồ công nghệ.
+Mình thích chỗ kinh doanh gặp công nghệ, mê chạy bộ, đạp xe và hay vọc vạch đồ công nghệ.
 
 ## Đường chạy
 
@@ -24,9 +24,9 @@ Mình thích chỗ kinh doanh gặp công nghệ, mê gym, chạy bộ và hay v
 |---|---|---|
 | KM 0 | **Chào** | Mình là ai, học ở đâu |
 | KM 8 | **Học** | TMĐT, BPMN · Camunda 7, kèm sơ đồ quy trình minh hoạ |
-| KM 15 | **Làm** | is207-store, Opencharity, Toyist Zone |
+| KM 15 | **Làm** | Lead-to-Order (Camunda), ShopFS, OpenCharity, Toyist Zone |
 | KM 21 | **Vọc** | Kỹ năng: viền liền là *đã dùng*, viền đứt là *đang vọc* |
-| KM 30 | **Tập** | Gym & chạy bộ |
+| KM 30 | **Tập** | Chạy bộ & đạp xe |
 | KM 40 | **Podium** | Top 4 + Best Presentation, EIU International Case Competition 2026 |
 | 🏁 | **Về đích** | Xé dải cuối bib để ghé GitHub |
 

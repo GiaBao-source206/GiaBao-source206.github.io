@@ -20,7 +20,7 @@ A personal intro page for Gia Bảo. Success: a visitor leaves knowing his name,
 
 ## Positioning
 
-Gia Bảo sits between business and tech: an E-commerce (Thương mại điện tử) student who models business processes (BPMN, Camunda Modeler), builds basic web, and enjoys AI and gadgets, plus gym and running.
+Gia Bảo sits between business and tech: an E-commerce (Thương mại điện tử) student who models business processes (BPMN, Camunda Modeler), builds basic web, and enjoys AI and gadgets, plus running and cycling.
 
 ## Capabilities and Constraints
 
@@ -32,7 +32,7 @@ Gia Bảo sits between business and tech: an E-commerce (Thương mại điện 
 
 - Display name: Gia Bảo.
 - Third-year (năm 3) student, Thương mại điện tử, UIT (Trường ĐH Công nghệ Thông tin, ĐHQG-HCM).
-- Interests: thể thao (gym, chạy bộ), vọc vạch công nghệ.
+- Interests: thể thao (chạy bộ, đạp xe), vọc vạch công nghệ.
 - Skills: HTML/CSS/JS cơ bản, AI tools & đồ công nghệ, TMĐT/marketing, BPMN, Camunda Modeler.
 - Contact: GitHub only, https://github.com/GiaBao-source206.
 
@@ -41,7 +41,7 @@ Gia Bảo sits between business and tech: an E-commerce (Thương mại điện 
 From the user's CV (2026-11-10):
 - Full name Nguyễn Văn Gia Bảo; B.Sc. E-Commerce, UIT – VNU-HCM, Sep 2024 – present; IELTS 6.5.
 - Experience: Sales Assistant, Toyist Zone, Oct–Nov 2025.
-- Projects: is207-store (Frontend Developer, Git); Opencharity (UI Designer, Figma).
+- Projects: Lead-to-Order on Camunda 7 (Business Analyst, BPMN 2.0); ShopFS (BA & Frontend Developer, MySQL, Figma); OpenCharity (UI/UX Designer, Figma).
 - Achievement: EIU International Case Competition 2026 (Becamex Business School), Top 4 Finalist + Best Presentation Award.
 - Skills: C++, SQL, Camunda 7, BPMN, Google Sheets API, MySQL, SSMS, Git, Excel.
 - Email and phone are in the CV but stay off the public site (user chose GitHub-only contact).
